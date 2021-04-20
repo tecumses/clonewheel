@@ -1,5 +1,5 @@
 # clonewheel
-simulating a tonewheel organ in pd
+simulating a tonewheel organ in pd\n
 to do:
   real bouncing contact keyclick
   vibratoscanner
