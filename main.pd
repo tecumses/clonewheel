@@ -1,4 +1,4 @@
-#N canvas 497 56 980 470 10;
+#N canvas 222 366 980 470 10;
 #N canvas 637 242 1172 816 gui 0;
 #X obj 100 100 cnv 15 600 220 empty empty empty 20 12 0 14 -86277 -66577
 0;
@@ -21,23 +21,23 @@
 #X floatatom 176 295 3 0 0 0 - - #0-udb4;
 #X obj 176 274 int;
 #X obj 198 138 vsl 15 120 8 0 0 1 empty empty empty 0 -9 0 10 -33289
--262130 -1 0 1;
+-262130 -1 11900 1;
 #X floatatom 198 295 3 0 0 0 - - #0-udb223;
 #X obj 198 274 int;
 #X obj 220 138 vsl 15 120 8 0 0 1 empty empty empty 0 -9 0 10 -262130
--86277 -1 0 1;
+-86277 -1 11900 1;
 #X floatatom 220 295 3 0 0 0 - - #0-udb2;
 #X obj 220 274 int;
 #X obj 242 138 vsl 15 120 8 0 0 1 empty empty empty 0 -9 0 10 -33289
--262130 -1 0 1;
+-262130 -1 11900 1;
 #X floatatom 242 295 3 0 0 0 - - #0-udb135;
 #X obj 242 274 int;
 #X obj 264 138 vsl 15 120 8 0 0 1 empty empty empty 0 -9 0 10 -33289
--262130 -1 0 1;
+-262130 -1 11900 1;
 #X floatatom 264 295 3 0 0 0 - - #0-udb113;
 #X obj 264 274 int;
 #X obj 286 138 vsl 15 120 8 0 0 1 empty empty empty 0 -9 0 10 -262130
--86277 -1 0 1;
+-86277 -1 11900 1;
 #X floatatom 286 295 3 0 0 0 - - #0-udb1;
 #X obj 286 274 int;
 #X obj 492 138 vsl 15 120 8 0 0 1 empty empty empty 0 -9 0 10 -86277
@@ -146,7 +146,7 @@
 #X connect 64 0 60 0;
 #X coords 0 -1 1 1 600 220 2 100 100;
 #X restore 2 2 pd gui;
-#N canvas 132 77 1712 753 master 1;
+#N canvas 132 77 1712 753 master 0;
 #X obj 232 170 catch~ 16ft;
 #X obj 382 170 catch~ 513ft;
 #X obj 532 170 catch~ 8ft;
@@ -311,7 +311,7 @@
 #X obj 277 789 vu 15 120 empty empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 295 789 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 260 789 vsl 15 119 0 112 0 1 \$0-master_s empty empty 0 -9 0
-10 -262130 -86277 -1 11800 1;
+10 -262130 -86277 -1 11200 1;
 #X obj 360 787 tgl 15 1 foldbackmod empty Foldbackmod 17 7 0 10 -262130
 -86277 -262130 1 1;
 #N canvas 0 23 1910 1033 ao28 0;
@@ -362,7 +362,6 @@
 #X obj 162 672 hip~ 10;
 #X obj 536 477 r~ leakagelevel;
 #X obj 513 537 s~ leakage;
-#X obj 102 693 dac~ 3 4;
 #N canvas 0 50 450 300 pink 0;
 #X obj 29 129 outlet~;
 #X obj 29 49 noise~;
@@ -392,6 +391,7 @@
 #X connect 3 0 1 0;
 #X restore 940 454 pd xfrmfilter;
 #X obj 101 410 lop~ 3000;
+#X obj 102 693 dac~ 1 2;
 #X connect 0 0 10 0;
 #X connect 0 0 38 0;
 #X connect 1 0 11 0;
@@ -464,7 +464,7 @@
 #X connect 53 0 44 1;
 #X connect 54 0 45 1;
 #X connect 55 0 46 1;
-#X connect 56 0 126 0;
+#X connect 56 0 125 0;
 #X connect 60 0 36 1;
 #X connect 61 0 36 0;
 #X connect 62 0 36 2;
@@ -493,7 +493,7 @@
 #X connect 91 0 24 0;
 #X connect 92 0 25 0;
 #X connect 93 0 118 0;
-#X connect 94 0 121 1;
+#X connect 94 0 120 1;
 #X connect 96 0 88 0;
 #X connect 101 0 100 0;
 #X connect 102 0 111 0;
@@ -508,19 +508,19 @@
 #X connect 110 1 102 0;
 #X connect 113 0 21 0;
 #X connect 114 0 22 0;
-#X connect 115 0 119 0;
-#X connect 116 0 119 1;
+#X connect 115 0 126 0;
+#X connect 116 0 126 1;
 #X connect 117 0 93 1;
+#X connect 119 0 122 0;
+#X connect 120 0 93 0;
 #X connect 120 0 123 0;
-#X connect 121 0 93 0;
-#X connect 121 0 124 0;
-#X connect 122 0 123 1;
-#X connect 123 0 121 0;
-#X connect 126 0 96 0;
+#X connect 121 0 122 1;
+#X connect 122 0 120 0;
+#X connect 125 0 96 0;
 #X coords 0 -1 1 1 220 220 1 250 750;
 #X restore 757 2 pd master;
 #X obj 598 2 rotarysine;
-#N canvas 497 183 1293 881 guts 1;
+#N canvas 296 24 1293 881 guts 0;
 #N canvas 685 135 1015 826 tgvol 0;
 #N canvas 0 23 591 278 (subpatch) 0;
 #X array array1 91 float 3;
@@ -717,14 +717,13 @@
 #X floatatom 587 619 5 0 0 0 - - -;
 #X obj 544 741 dbtorms;
 #X obj 587 639 t b f;
-#X obj 544 720 +;
 #X obj 844 724 dbtorms;
 #X obj 1099 665 vsl 15 128 0 6000 0 1 empty empty empty 0 -9 0 10 -262144
 -1 -1 12700 1;
 #X floatatom 1099 801 5 0 0 0 - - -;
 #X obj 1099 821 s aftertgleaklop;
-#X obj 1145 50 vsl 15 128 0 6000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8500 1;
+#X obj 1145 50 vsl 15 128 0 6000 0 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 8200 1;
 #X floatatom 1145 186 5 0 0 0 - - -;
 #X obj 1145 206 s clicklop;
 #X obj 177 116 keyclick3;
@@ -735,6 +734,7 @@
 #X floatatom 629 762 5 0 0 0 - - -;
 #X obj 608 829 s aftertgleakagelevel;
 #X obj 64 360 clone -s 36 matrix 61;
+#X obj 544 720 + 50;
 #X connect 2 0 1 0;
 #X connect 2 0 0 0;
 #X connect 2 0 15 0;
@@ -745,12 +745,11 @@
 #X connect 2 0 20 0;
 #X connect 2 0 22 0;
 #X connect 2 0 14 0;
-#X connect 2 0 50 0;
+#X connect 2 0 49 0;
 #X connect 2 0 33 0;
 #X connect 2 0 36 0;
-#X connect 2 0 47 0;
+#X connect 2 0 46 0;
 #X connect 2 0 29 0;
-#X connect 2 0 60 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
@@ -763,11 +762,11 @@
 #X connect 12 0 2 0;
 #X connect 13 0 6 0;
 #X connect 15 0 41 0;
-#X connect 15 0 45 0;
+#X connect 15 0 60 0;
 #X connect 16 0 28 0;
 #X connect 17 0 18 0;
 #X connect 18 0 19 0;
-#X connect 20 0 46 0;
+#X connect 20 0 45 0;
 #X connect 21 0 27 0;
 #X connect 22 0 23 0;
 #X connect 23 0 26 0;
@@ -784,18 +783,18 @@
 #X connect 37 0 40 0;
 #X connect 41 0 16 0;
 #X connect 42 0 44 0;
+#X connect 43 0 57 0;
 #X connect 43 0 58 0;
-#X connect 43 0 59 0;
-#X connect 44 0 45 0;
-#X connect 44 1 45 1;
-#X connect 45 0 43 0;
-#X connect 46 0 21 0;
+#X connect 44 0 60 0;
+#X connect 44 1 60 1;
+#X connect 45 0 21 0;
+#X connect 46 0 47 0;
 #X connect 47 0 48 0;
-#X connect 48 0 49 0;
+#X connect 49 0 50 0;
 #X connect 50 0 51 0;
-#X connect 51 0 52 0;
-#X connect 54 0 55 0;
-#X connect 56 0 57 0;
+#X connect 53 0 54 0;
+#X connect 55 0 56 0;
+#X connect 60 0 43 0;
 #X restore 2 232 pd guts;
 #X obj 553 248 midiin;
 #X obj 553 269 midiout;
